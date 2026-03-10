@@ -1,0 +1,87 @@
+/* =========================
+   Global Styles
+========================= */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Background Blur Layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("/static/images/faceauth2.jpeg") no-repeat center center;
+  background-size: cover;
+
+  filter: blur(6px);
+  transform: scale(1.08); /* removes black edges */
+  z-index: -2;
+}
+
+/* Soft Dark Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: -1;
+}
+
+/* =========================
+   Right Panel
+========================= */
+.right-panel {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn-primary { background-color: #2563eb; }
+.btn-success { background-color: #16a34a; }
+.btn-warning { background-color: #f59e0b; }
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background: rgba(15,23,42,0.9) !important;
+}
+
+/* =========================
+   Form Inputs
+========================= */
+.form-control {
+  background: rgba(255,255,255,0.7) !important;
+  border: 1px solid rgba(255,255,255,0.4) !important;
+  backdrop-filter: blur(4px);
+}
